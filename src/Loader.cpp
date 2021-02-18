@@ -53,6 +53,8 @@ bool GenerateMazeFromFile(Maze* maze, std::string filename)
 	// Loads the file and puts in a string
 	std::ifstream file(filename);
 	std::string contents((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
+	
+	file.close();
 
 	// Checks if the string has been filled
 	if (contents.empty())
